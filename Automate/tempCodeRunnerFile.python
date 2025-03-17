@@ -1,0 +1,25 @@
+import webbrowser
+import time
+import random
+from faker import Faker
+
+# Initialize Faker to generate random search terms
+fake = Faker()
+
+def open_random_search():
+    search_term = fake.word()  # Generate a random word
+    url = f"https://www.bing.com/search?q={search_term}"
+    webbrowser.open_new_tab(url)
+    print(f"Searching on Bing: {search_term}")
+
+def main():
+    try:
+        while True:
+            open_random_search()
+            # Wait for a random time between 3 to 5 seconds
+            time.sleep(random.randint(3, 5))
+    except KeyboardInterrupt:
+        print("\nStopped by user.")
+
+if __name__ == "__main__":
+    main()
