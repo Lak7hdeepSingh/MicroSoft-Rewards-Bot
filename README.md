@@ -23,12 +23,12 @@ python script.py
 + Edge WebDriver
 
 ## ✅ Features
--✔️ Automates up to 30 searches (adjustable)
--✔️ Simulates human-like behavior with random delays
--✔️ Clean termination with try-except-finally handling
+- ✔️ Automates up to 30 searches (adjustable)
+- ✔️ Simulates human-like behavior with random delays
+- ✔️ Clean termination with try-except-finally handling
 
 ## 👨‍💻 How to Customize
-To adjust the number of searches, change the value in:
+- To adjust the number of searches, change the value in:
 ```
 for _ in range(30):
 ```
@@ -36,3 +36,17 @@ To modify the delay time, adjust the range in:
 ```
 time.sleep(random.uniform(5, 10))
 ```
+## Updating the Driver Path
+- To make the script work, you need to update the driver_path variable with the correct path to your Edge WebDriver:
+
+- Download the Edge WebDriver from the official Microsoft site:
+[Download Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+
+
+- Extract the downloaded file and place the msedgedriver.exe file in a known location (e.g., C:\Users\<YourUsername>\Downloads).
+
+- Open the script and update the driver_path variable with the correct location of the WebDriver:
+```
+driver_path = r"C:\Users\<YourUsername>\Downloads\msedgedriver.exe"
+```
+- Save the changes and run the script! ✅
